@@ -1,0 +1,64 @@
+/**index.wxss**/
+@import '../../ui/tabs/tabs.wxss';
+@import '/templates/car-window/car-window.wxss';
+@import '/templates/merchant-info/merchant-info.wxss';
+
+page {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.index {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  color: #FFF;
+  font-size: 28rpx;
+}
+
+.index-tabs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #BC4F4A;
+  width: 100%;
+}
+
+.index-tabs-item {
+  margin: 0 5rpx;
+}
+
+.tabs__item--active {
+  border-radius: 36rpx;
+  background: #333;
+  padding: 10rpx 20rpx;
+}
+
+map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: 100rpx;
+  width: 100%;
+  height: auto;
+}
+
+.index-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .6);
+  z-index: 9;
+}
+
+.merchant-info-wrap {
+  z-index: 99;
+}
+
+.car-window {
+  z-index: 99
+}

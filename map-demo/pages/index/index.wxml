@@ -1,0 +1,81 @@
+<import src="../../templates/car-window/car-window.wxml" />
+
+<!--index.wxml-->
+<view class="index">
+  <!--顶层tab-->
+  <view class="index-tabs tabs tabs--md">
+
+    <scroll-view scorll-x >
+     <view class="tabs__wrap">
+       <view
+          wx:for="{{ tabs }}"
+          class="tabs__item"
+        >
+        {{ item.value }}
+       </view>
+     </view>
+    </scroll-view>
+
+  </view>
+
+  <!--map 组件-->
+    <map
+      id="map"
+      longitude="{{ mapLongitude }}"
+      latitude="{{ mapLatitude }}"
+      controls="{{ controls }}"
+      markers="{{ markers }}"
+      polyline="{{ polyline }}"
+      include-points="{{includePoints}}"
+      scale="17"
+      bindcontroltap="controlsTapped"
+    >
+    </map>
+
+    <!-- 地点公司列表 -->
+    <view class="index-bottom">
+      <view class="toggle-img">
+        共有 {{ activeMerchantList.length }} 个 {{ category }}
+        <view
+          class="index-bottom__toggle
+                 iconfont
+                 {{ isSpread ? 'icon-spread-down' : 'icon-spread-up' }}"
+         >
+        </view>
+
+        <view class="index-bottom-content">
+          <view class="merchant-list">
+            <scroll-view
+              scroll-x
+              scroll-left="{{ scrollLeft }}"
+              scroll-with-animation="{{ true }}"
+            >
+
+              <view class="merchant-list-wrap">
+
+                <block wx:for="{{ activeMerchantList }}">
+                  <navigator
+                    wx:if="{{ category !== '洗手间' }}"
+                    class="list-item"
+                    data-index="{{ index }}"
+                </block>
+
+              </view>
+
+            </scroll-view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  <!-- 底层merchant-info  -->
+  <view class="index-merchant-info"></view>
+
+  <!-- 停车找车 组件 -->
+  <view hidden="{{ !isCarWindowShow }}">
+    <template
+      is="carWindow"
+      data="{{ isFirstRecord: isFirstRecord, carImg: carImg}}"
+    />
+  </view>
+</view>

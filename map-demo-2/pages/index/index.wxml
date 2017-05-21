@@ -1,0 +1,41 @@
+<import src="../../templates/car-window/car-window.wxml" />
+
+<!--index.wxml-->
+<view class="index">
+
+ <view class="index-tabs tabs tabs--md" hidden="{{ !isMapShow }}">
+   <view class="index-tabs-wrap tabs__wrap">
+     <view
+      class="index-tabs-item tabs__item {{ activeTab == item.id ? 'tabs__item--active' : '' }}"
+      wx:for="{{ tabs }}">
+      {{ item.value }}
+     </view>
+   </view>
+ </view>
+
+<map
+  longitude="{{ mapLongitude }}"
+  latitude="{{ mapLatitude }}"
+  scale="17"
+
+  markers="{{ markers }}"
+  bindmarkertap="markerTap"
+
+  controls="{{ controls }}"
+  bindcontroltap="controlTap"
+
+  polyline="{{ polyline }}"
+
+  bindtap=""
+>
+</map>
+
+<include src="../../templates/merchant-info/merchant-info.wxml" />
+
+
+<view hidden="{{ !isCarWindowShow }}" >
+  <template is="carWindow" data="{{ isFirstRecord }}"></template>
+</view>
+<view class="index-cover" hidden="{{ isMapShow }}" bindtap="closePopup"></view>
+
+</view>

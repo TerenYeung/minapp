@@ -1,0 +1,24 @@
+<template name="carWindow">
+  <view class="car-window">
+    <view class="car-window-wrap">
+
+      <view class="car-window-top">
+        <image class="car-window-top__car" src="{{ carImg }}"></image>
+        <view class="car-window-top__title">不管走得再远，你都能找回我</view>
+        <view class="car-window-top__subtitle">（适用于记录停车位/地标）</view>
+      </view>
+
+      <view class="car-window-bottom" wx:if="{{ isFirstRecord }}" bindtap="recordLocation">
+      记录车位
+      </view>
+
+      <view class="car-window-bottom" wx:else>
+        <view class="car-window-bottom__record" bindtap="reRecordLocation">重新记录</view>
+        <view class="car-window-bottom__navigate" bindtap="findCar">进入导航</view>
+      </view>
+
+    </view>
+
+    <view class="car-window__close iconfont icon-cancel1" bindtap="closePopup"></view>
+  </view>
+</template>

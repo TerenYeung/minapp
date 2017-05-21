@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/activity-list/activity-list"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#BC4F4A",
+    "navigationBarTitleText": "TIT智慧园区",
+    "navigationBarTextStyle": "white"
+  }
+}

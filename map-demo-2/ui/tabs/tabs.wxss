@@ -1,0 +1,47 @@
+/*tabs组件分成3层
+ - .tabs block 代表tabs组件
+ - .tabs__wrap 代表tabs组件的wrap元素
+ - .tabs__items 代表tabs组件的items元素*/
+
+.tabs {
+  width: 100%;
+  padding: 10rpx 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*tabs size*/
+/*tips: 只适用于.tabs__wrap的flex-direction为row情形下*/
+.tabs--sm {
+  height: 50rpx;
+}
+
+.tabs--md {
+  height: 80rpx;
+}
+
+.tabs--lg {
+  height: 100rpx;
+}
+
+
+.tabs__wrap {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+
+.tabs__wrap--v {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tabs__item {
+  align-self: center;
+}
+

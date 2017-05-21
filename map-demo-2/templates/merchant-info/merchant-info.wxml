@@ -1,0 +1,21 @@
+<view class="merchant-info" hidden="{{ !isMarkerTapped }}">
+
+  <view class="merchant-info-wrap">
+    <view class="merchant-info-intro">
+      <view class="merchant-info-intro__img">
+        img here...
+      </view>
+      <view class="merchant-info-intro__detail">
+        detail here...
+      </view>
+    </view>
+
+    <view class="merchant-info-direct">
+     <view class="merchant-info-direct__navigate">到这里去</view>
+     <view class="merchant-info-direct__navigate-icon iconfont icon-zhiyin"></view>
+    </view>
+  </view>
+    <view class="merchant-info-close" bindtap="hiddenMerchantInfo">
+      <view class="merchant-info__close-btn iconfont icon-cancel1"></view>
+    </view>
+</view>

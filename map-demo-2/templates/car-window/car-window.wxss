@@ -1,0 +1,69 @@
+.car-window {
+  position: fixed;
+  width: 638rpx;
+  top: 198rpx;
+  left: 56rpx;
+  z-index: 100;
+}
+
+.car-window-wrap {
+  width: 100%;
+  height: 704rpx;
+  background: #FFF;
+}
+
+.car-window-top {
+  width: 100%;
+  height: 582rpx;
+  text-align: center;
+}
+
+.car-window-bottom {
+  text-align: center;
+  height: 120rpx;
+  border-top: 0.5rpx solid #E4E4E3;
+  color: #464645;
+  font-size: 16px;
+  line-height: 120rpx;
+  vertical-align: middle;
+}
+
+.car-window-top__car {
+  margin-top: 84rpx;
+  width: 230rpx;
+  height: 204rpx;
+}
+
+.car-window-top__title {
+  margin-top: 64rpx;
+  color: #000;
+  font-size: 20px;
+}
+
+.car-window-top__subtitle {
+  margin-top: 36rpx;
+  color: #464645;
+  font-size: 16px;
+}
+
+.car-window-bottom__record {
+  display: inline-block;
+  width: 50%;
+  border-right: 0.5px solid #E4E4E3;
+}
+
+.car-window-bottom__navigate {
+  display: inline-block;
+  width: 49%;
+  font-weight: 500;
+}
+
+.car-window__close {
+  text-align: center;
+  margin-top: 92rpx;
+}
+
+.car-window__close::before {
+  color: #FFF;
+  font-size: 32px;
+}

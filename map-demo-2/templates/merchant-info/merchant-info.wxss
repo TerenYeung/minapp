@@ -1,0 +1,60 @@
+
+
+/*.merchant-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}*/
+
+.merchant-info-wrap {
+  position: absolute;
+  top: 200rpx;
+  width: 600rpx;
+  background: #FFF;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #000;
+}
+
+.merchant-info-intro {
+  border-bottom: 1rpx solid;
+}
+
+.merchant-info-intro__img {
+  width: 100%;
+  height: 300rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.merchant-info-intro__detail {
+  width: 100%;
+  padding: 20rpx;
+}
+
+.merchant-info-direct {
+  padding: 20rpx;
+  text-align: center;
+}
+
+.merchant-info-direct view {
+  display: inline-block;
+}
+
+.merchant-info-direct__navigate-icon {
+  margin-left: 10rpx;
+}
+
+.merchant-info-close {
+  position: absolute;
+  top:750rpx;
+  left:50%;
+  transform:translateX(-50%);
+  z-index: 99;
+}
+
+.merchant-info__close-btn {
+  font-size:30px;
+}

@@ -1,0 +1,13 @@
+/* pages/test/test.wxss */
+
+.bc_green {
+  background: green;
+}
+
+.bc_blue {
+  background: blue;
+}
+
+.bc_red {
+  background: red;
+}
