@@ -3,15 +3,15 @@ import config from './config/config'
 App({
   onLaunch: function() {
 
-    // require('./utils/sdk-v1.0.3.js');
-    // wx.BaaS.init(config.BAAS_CLIENT_ID);
+    require('./utils/sdk-v1.0.3.js');
+    wx.BaaS.init(config.BAAS_CLIENT_ID);
 
 
-    // wx.BaaS.login().then(res => {
-
-    // }).catch(err => {
-    //   console.log(err);
-    // });
+    wx.BaaS.login().then(res => {
+      console.log('BaaS is Logined')
+    }).catch(err => {
+      console.log(err);
+    });
 
 
 
