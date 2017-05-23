@@ -10,13 +10,11 @@
     {{ title }}
   </view>
   <view class="index-todos">
-<!--     <view class="index-todos__title">
-      Books：
-    </view> -->
     <view class="index-todos__input">
       <input
         type="text"
         placeholder="我的床头书"
+        value="{{ createBookValue }}"
         confirm-type="完成"
         bindinput="inputBook"
       />
@@ -31,16 +29,16 @@
             type="text"
             value="{{ item.response.bookName }}"
             confirm-type="完成"
-            data-book-id="{{ item.response.recordID }}"
+            data-book-id="{{ item.id }}"
+            bindinput="getEditBookName"
           />
         </view>
- <!-- bindtap="editBook" -->
         <button
           class="index-todos__controls--edit-btn btn"
           type="primary"
-          data-book-id="{{ item.response.recordID }}"
+          data-book-id="{{ item.id }}"
           data-index="{{index}}"
-          bindtap="{{ item.response.isEditing ? 'inputEditBook' : 'editBook' }}"
+          bindtap="{{ item.response.isEditing ? 'saveBook' : 'editBook' }}"
 
         >
         {{ item.response.isEditing ? '保存' : '编辑' }}
@@ -49,7 +47,7 @@
           class="index-todos__controls--delete btn"
           bindtap="deleteBook"
           type="warn"
-          data-book-id="{{ item.response.recordID }}"
+          data-book-id="{{ item.id }}"
           bindtap="deleteBook"
         >
           删除
@@ -66,5 +64,4 @@
       </button>
     </view>
   </view>
-
 </view>

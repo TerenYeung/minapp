@@ -1,6 +1,4 @@
 /**index.wxss**/
-/*@import '../../ui/btn/src/btn.wxss';*/
-
 .index {
   width: 100%;
   height: 100%;
@@ -11,7 +9,7 @@
 
 .index-profile {
   width: 80%;
-  margin: 100rpx auto;
+  margin: 100rpx auto 60rpx auto;
 }
 
 .index-profile__img {
@@ -53,7 +51,7 @@
 
 .index-todos__showLayer {
   margin-top: 20rpx;
-  max-height: 300rpx;
+  max-height: 350rpx;
   overflow: auto;
 }
 
@@ -80,7 +78,7 @@
 
 .index-todos__controls--edit-area > input {
   border: 1rpx solid #eee;
-  padding: 4rpx 10rpx; /*hack 上下4rpx为了解决input显示时文字的移动*/
+  padding: 4rpx 10rpx;  /*hack 上下4rpx为了解决input显示时文字的移动*/
 }
 
 .index-todos__controls--create {
