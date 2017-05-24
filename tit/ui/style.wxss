@@ -1,0 +1,5 @@
+
+@import './reset/reset.wxss'
+@import '../resources/iconfont.wxss'
+@import './tabs/tabs.wxss'
+

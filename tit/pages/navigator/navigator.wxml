@@ -1,0 +1,56 @@
+<view class="navigator">
+<!--   <view class="navigator-tabs">
+    hello world
+  </view> -->
+  <map
+    class="navigator-map"
+    longitude="{{ coreLongitude }}"
+    latitude="{{ coreLatitude }}"
+    scale="16"
+    controls="{{ controls }}"
+    bindcontroltap="{{ controlTap }}"
+    markers="{{ markers }}"
+    bindmarkertap="markerTap"
+    polyline=""
+    >
+  </map>
+
+  <view class="navigator-merchants {{ isSpread ? '' : 'merchants-items-hidden' }}">
+
+    <view
+      class="navigator-merchants__record"
+      bindtap="switchMerchantsItems"
+    >
+      共有{{ activeMerchantsList.length }}个商户
+      <view class="navigator-merchants__toggle iconfont {{ isSpread ? 'icon-spread-down':'icon-spread-up' }}"></view>
+    </view>
+
+    <view class="navigator-merchants__items"  hidden="{{ !isSpread }}">
+       <scroll-view
+        scroll-x="{{ true }}"
+        scroll-left="{{ scrollLeft }}"
+        scroll-with-animation="{{ true }}"
+        >
+        <block
+          class="navigator-merchants__item"
+          wx:for="{{ activeMerchantsList }}"
+          >
+
+          <navigator id="{{ item.id }}" class="list-item"  url="../company/company?id={{ item.id }}">
+            <view
+              class="list-item__img {{ index == activeMerchantIndex ? 'active-merchant-border' : ''}}"
+              style="background-image: url({{ item.response.image.length > 1 ? item.response.image[0]: item.response.image }})"
+
+            ></view>
+
+            <view class="list-item__title">{{ item.response.title }}</view>
+          </navigator>
+
+        </block>
+      </scroll-view>
+    </view>
+
+  </view>
+  <include src="../../templates/merchant-info/merchant-info.wxml" />
+  <image src="{{ src }}" hidden="{{ isMapShow }}" class="navigator-overlay-img" bindtap="closePopup"/>
+</view>

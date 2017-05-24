@@ -1,0 +1,48 @@
+/**
+ * 此 iconfont 来自 http://iconfont.in/ 的 TIT 项目，project id 为 254641
+ * 更新时从该项目中的 Font class 中 copy 过来
+ * 注意更新时不要覆盖 .iconfont
+ * font-size 默认设为 36rpx
+ */
+
+@font-face {
+  font-family: 'iconfont';  /* project id 254641 */
+  src: url('//at.alicdn.com/t/font_zhao5owawjulq5mi.eot');
+  src: url('//at.alicdn.com/t/font_zhao5owawjulq5mi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_zhao5owawjulq5mi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_zhao5owawjulq5mi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_zhao5owawjulq5mi.svg#iconfont') format('svg');
+}
+
+/**
+ * iconfont 有更新时不修改此处，只修改本文件其他部分
+ */
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 36rpx;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-zhiyin:before { content: "\e68a"; }
+
+.icon-location:before { content: "\e68b"; }
+
+.icon-search-tit:before { content: "\e68c"; }
+
+.icon-cancel:before { content: "\e68d"; }
+
+.icon-duihao-tit:before { content: "\e68e"; }
+
+.icon-cancel1:before { content: "\e68f"; }
+
+.icon-telephone:before { content: "\e690"; }
+
+.icon-jiantou:before { content: "\e691"; }
+
+.icon-write:before { content: "\e692"; }
+
+.icon-spread-up:before { content: "\e699"; }
+
+.icon-spread-down:before { content: "\e698"; }

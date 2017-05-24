@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/navigator/navigator",
+    "pages/company/company",
+    "pages/goToMap/goToMap"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#bc4f4a",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "TIT 智慧园区",
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": false
+  }
+}
