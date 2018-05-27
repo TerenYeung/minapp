@@ -57,7 +57,7 @@ Page({
       // let totalCost = orderTypeMap[orderType]
 
       // 测试支付金额
-      let totalCost = 0.01
+      let totalCost = 0.03
       let merchandiseDescription = '一分钱测试商品'
 
       let params = {
@@ -67,7 +67,7 @@ Page({
 
       wx.BaaS.pay(params)
         .then(res => {
-
+          debugger
           wx.BaaS.getRecordList({
             tableID: config.BAAS.TABLE_ID,
             created_by: wx.BaaS.storage.get('uid')

@@ -1,14 +1,13 @@
 {
   "pages": [
+    "pages/follow/follow",
     "pages/index/index",
-    "pages/order/order",
-    "pages/profile/profile"
-
+    "pages/articleDetail/articleDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F5F2E9",
-    "navigationBarTitleText": "未来社",
+    "navigationBarBackgroundColor": "#eee",
+    "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
   "debug": true

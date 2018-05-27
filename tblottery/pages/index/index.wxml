@@ -1,0 +1,47 @@
+<!--index.wxml-->
+<view class="container index">
+  <scroll-view scroll-y style="height: 100%;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}"
+    scroll-top="{{scrollTop}}">
+    <!-- Banner -->
+    <view class="index-banner">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{bannerList}}" wx:key="{{id}}">
+          <swiper-item>
+            <image src="{{item.img_src}}" class="slide-image" bindtap="bannerTap" data-link="{{item.link}}" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+    <!-- Category -->
+    <view class="index-category">
+
+    </view>
+
+    <view class="index-products">
+      <view class="index-products__title">· 高额优惠 实时直播 ·</view>
+      <view class="product-list">
+        <view class="product-list__item" wx:for="{{productList}}" wx:key="{{kid}}" data-productid="{{item.id}}" bindtap="onProductTap">
+          <view class="product-list__item--img">
+            <image src="{{item.swiper_imgs[0]}}" style="width:336rpx;height:440rpx;" mode="aspectFill"></image>
+            <view class="product-list__item--discount">
+              券 {{item.orig_price - item.lottery_price}}
+            </view>
+          </view>
+          <view class="product-list__item--detail">
+            <view class="product-list__item--title">{{item.title}}</view>
+            <view class="product-list__item--price-area">
+              <view class="price">
+                ￥{{item.lottery_price}}
+              </view>
+              <view class="text">券后 /</view>
+              <view class="sales">点击量：{{item.click_volume}}</view>
+            </view>
+
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </scroll-view>
+</view>

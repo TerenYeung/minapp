@@ -1,0 +1,8 @@
+view,
+text {
+  box-sizing: border-box;
+}
+
+.container {
+  color: rgb(117, 115, 115);
+}

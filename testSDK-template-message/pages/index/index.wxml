@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<form bindsubmit="addProduct" report-submit>
+<view class="container">
+  <button formType="submit">添加产品</button>
+</view>
+</form>
+<view class="container">
+  <button bindtap="getProduct">获取一个产品</button>
+  <button bindtap="deleteProduct">删除一个产品</button>
+  <button bindtap="updateProduct">更新一个产品</button>
+  <button bindtap="queryCompare">比较查询</button>
+  <button bindtap="queryString">字符串查询</button>
+  <button bindtap="queryArray">数组查询</button>
+  <button bindtap="queryisNull">isNull查询</button>
+  <button bindtap="queryOr">or 查询</button>
+  <button bindtap="queryAnd">and 查询</button>
+  <button bindtap="queryOrWithAnd">and&or 查询</button>
+  <button bindtap="numberAtom">数值原子操作</button>
+  <button bindtap="arrayAtom">数组原子操作</button>
+  <button bindtap="limitOffSet">limitOffSet</button>
+
+  <button bindtap="getContentDetail">获取内容详情</button>
+  <button bindtap="getContentList">获取内容列表</button>
+  <button bindtap="getContentGroupDetail">获取内容库详情</button>
+  <button bindtap="getContentGroupList">获取内容库列表</button>
+  <button bindtap="getContentCategoryDetail">获取内容库分类详情</button>
+
+  <view class="content">{{ content }}</view>
+
+</view>

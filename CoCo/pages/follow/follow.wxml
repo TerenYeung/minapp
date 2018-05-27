@@ -1,0 +1,71 @@
+<view class="follow">
+  <view class="follow-header">
+    <view class="follow-profile">
+      <image class="follow-profile-avatar" src="{{user.user_info.avatarUrl}}"></image>
+      <view class="follow-profile-name">{{user.user_info.name}}</view>
+    </view>
+  </view>
+  <view class="follow-body">
+    <view class="follow-switch">
+      <view class="follow-all {{activeTab}}" bindtap="switchTab" data-cat="all">全部</view>
+      <view class="follow-followers {{activeTab}}" bindtap="switchTab" data-cat="followers">关注者</view>
+      <view class="follow-followees {{activeTab}}" bindtap="switchTab" data-cat="followees">粉丝</view>
+    </view>
+    <scroll-view
+      wx:if="{{activeTab == 'all'}}"
+      scroll-y
+      bindscrolltoupper="upper" bindscrolltolower="lower">
+      <view class="user-header">
+        <view>头像</view>
+        <view>姓名</view>
+        <view>关注状态</view>
+      </view>
+      <view
+        class="user-list"
+        wx:for="{{userList}}"
+        wx:key="{{item.id}}"
+        data-cid="{{item.id}}"
+        >
+        <view class="user-avatar">
+          <image src="{{item.user_info.avatarUrl}}"></image>
+        </view>
+        <view class="user-name">{{item.user_info.name}}</view>
+        <view
+          class="follow-btn d-follow-btn"
+          wx:if="{{ !item.isFollowed }}"
+          data-index="{{index}}"
+          data-follow="true"
+          data-recordid="{{item.id}}"
+          data-follower="{{item}}"
+          bindtap="doFollow">关注</view>
+        <view
+          data-index="{{index}}"
+          data-recordid="{{item.id}}"
+          data-follower="{{item}}"
+          class="follow-btn c-follow-btn" wx:else data-follow="false" bindtap="doFollow">
+          取消关注
+        </view>
+      </view>
+    </scroll-view>
+    <scroll-view
+      wx:else
+      scroll-y
+      bindscrolltoupper="upper" bindscrolltolower="lower">
+      <view class="user-header">
+          <view>头像</view>
+          <view>姓名</view>
+      </view>
+      <view
+        class="user-list"
+        wx:for="{{userList}}"
+        wx:key="{{item.user_id}}"
+        data-cid="{{item.user_id}}"
+        >
+        <view class="user-avatar">
+          <image src="{{item.avatarUrl}}"></image>
+        </view>
+        <view class="user-name">{{item.name}}</view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

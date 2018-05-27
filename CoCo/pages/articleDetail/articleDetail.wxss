@@ -1,0 +1,6 @@
+@import '../../lib/wxParser/index.wxss';
+
+.article-detail {
+  padding: 20rpx;
+  font-size: 30rpx;
+}

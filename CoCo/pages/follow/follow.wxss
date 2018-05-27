@@ -1,0 +1,76 @@
+/* pages/follow/follow.js.wxss */
+.follow-profile {
+  text-align: center;
+  padding: 100rpx 0;
+}
+
+.follow-profile-avatar {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+}
+
+.follow-switch {
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx;
+  text-align: center;
+  color: #AAA;
+}
+
+.follow-switch view {
+  flex-basis: 33.33%;
+}
+
+.follow-all.all,
+.follow-followers.followers,
+.follow-followees.followees {
+  color: #333;
+}
+
+.user-header {
+  display: flex;
+  text-align: center;
+  padding: 10rpx 0;
+  background: #333;
+  color: #FFF;
+  justify-content: space-between;
+}
+
+.user-header view {
+  padding: 0 10rpx;
+  flex-basis: 33.33%;
+}
+
+.user-list {
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 32rpx;
+  text-align: center;
+  border-bottom: 1px solid #333;
+  box-shadow: rgba(107, 113, 114, 0.15) 0px 2px 4px 0px;
+}
+
+.user-list .user-avatar {
+  width: 33.33%;
+  padding: 0 10rpx;
+}
+
+.user-list .user-avatar image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+
+.user-list .user-name {
+  line-height: 80rpx;
+  width: 33.33%;
+  padding: 0 10rpx;
+}
+
+.user-list .follow-btn {
+  line-height: 80rpx;
+  width: 33.33%;
+  padding: 0 10rpx;
+}

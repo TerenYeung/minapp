@@ -1,0 +1,13 @@
+<import src="../../lib/wxParser/index.wxml" />
+
+<view class="article-detail">
+  <view class="article-detail-title">
+    {{article.title}}
+  </view>
+  <view class="article-cover">
+    {{article.cover}}
+  </view>
+  <view class="article-detail">
+    <template is="wxParser" data="{{wxParserData:richText.nodes}}" />
+  </view>
+</view>

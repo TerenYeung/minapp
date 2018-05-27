@@ -1,0 +1,45 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/lottery/lottery",
+    "pages/discount/discount",
+    "pages/profile/profile",
+    "pages/product/product"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#989A9C",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "selectedColor": "#ff9000",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "img/home.png",
+      "selectedIconPath": "img/home_active.png"
+    },
+    {
+      "pagePath":"pages/lottery/lottery",
+      "text":"找优惠券",
+      "iconPath":"img/lottery.png",
+      "selectedIconPath":"img/lottery_active.png"
+    },
+    {
+      "pagePath":"pages/discount/discount",
+      "text":"高额优惠",
+      "iconPath":"img/discount.png",
+      "selectedIconPath":"img/discount_active.png"
+    },
+    {
+      "pagePath":"pages/profile/profile",
+      "text":"我的",
+      "iconPath":"img/profile.png",
+      "selectedIconPath":"img/profile_active.png"
+    }]
+  }
+}

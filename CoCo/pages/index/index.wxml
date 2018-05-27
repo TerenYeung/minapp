@@ -1,0 +1,59 @@
+<view class="index">
+  <view class="top-bar">
+    <view class="top-bar-title">
+      Coconut
+    </view>
+    <view class="top-bar-searchbox">
+      <image src=""></image>
+    </view>
+    <view class="top-bar-avatar">
+      <image src="{{avatar}}"></image>
+    </view>
+  </view>
+  <view class="article-list">
+    <scroll-view
+      scroll-y
+      bindscrolltoupper="upper" bindscrolltolower="lower">
+      <view
+        class="article-item"
+        wx:for="{{contentList}}"
+        wx:key="{{item.id}}"
+        data-cid="{{item.id}}"
+        bindtap="gotoDetail"
+        >
+        <view class="article-item-cover">
+          <image
+            mode="widthFix"
+            src="{{item.cover}}"></image> 
+        </view>
+        <view class="article-item-detail">
+            <view class="article-item-title">
+                {{item.title}}
+              </view>
+              <view class="article-item-summary">
+                {{item.summary}}
+              </view>
+              <view class="article-item-footer">
+                <view class="author-date">
+                  <view class="author">{{item.author}}</view>
+                  <view class="date">{{item.created_at}}</view>
+                </view>
+              </view>
+            </view>
+        </view>
+    </scroll-view>
+  </view>
+  <form bindsubmit="formSubmit" report-submit>
+      <button
+        class="book-btn"
+        formType="submit" size="default">
+        <view>当日</view>
+        <view>文章</view>
+        <view>推荐</view>
+      </button>
+  </form>
+  <!-- <view class="vip" bindtap="payModal">
+    <view>成为</view>
+    <view>VIP</view>
+  </view> -->
+</view>
